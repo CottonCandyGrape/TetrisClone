@@ -72,10 +72,7 @@ public class BlockController : MonoBehaviour
                         int posX = Mathf.RoundToInt(transform.GetChild(i).position.x);
                         if (posX < 0)
                         {
-                            Vector2 tmp = transform.position;
-                            tmp += Vector2.right;
-                            transform.position = tmp;
-
+                            transform.position += Vector3.right;
                             flag = true;
                         }
                     }
@@ -95,10 +92,7 @@ public class BlockController : MonoBehaviour
                         int posX = Mathf.RoundToInt(transform.GetChild(i).position.x);
                         if (posX > 9)
                         {
-                            Vector2 tmp = transform.position;
-                            tmp += Vector2.left;
-                            transform.position = tmp;
-
+                            transform.position += Vector3.left;
                             flag = true;
                         }
                     }
